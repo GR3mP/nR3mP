@@ -28,7 +28,9 @@ namespace tun {
 class Interceptor {
  private:
   std::vector<uint64_t> ip;
-
+ 
+ public:
+  std::vector<uint64_t> set(std::vector<uint64_t>);
 };
 
 }
