@@ -18,6 +18,7 @@
 
 #pragma once
 
+#include <unordered_set>
 #include <cstdint>
 #include <vector>
 
@@ -27,10 +28,11 @@ namespace tun {
 
 class Interceptor {
  private:
-  std::vector<uint64_t> ip;
+  // std::vector<uint64_t> ip;
+  std::unordered_set<uint32_t> ips;
  
  public:
-  std::vector<uint64_t> set(std::vector<uint64_t>);
+  void set(const std::vector<uint32_t>& ips);
 };
 
 }
